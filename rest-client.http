@@ -1,0 +1,22 @@
+### Send fetch dhong request
+GET http://localhost:3000/songs
+
+### Find song request 
+GET http://localhost:3000/songs/2
+
+### Create new songs request 
+POST http://localhost:3000/songs
+Content-Type: application/json
+
+ {
+    "title": "lasting-lover",
+    "artists": ["sigala"],
+    "releaseDate": "2022-09-29",
+    "duration": "02:32"
+ }
+
+### Update song requests
+PUT http://localhost:3000/songs/1
+
+### Update song requests
+DELETE http://localhost:3000/songs/1 
