@@ -1,6 +1,8 @@
 import { Injectable } from '@nestjs/common';
 
-@Injectable()
+@Injectable({
+    scope: Scope.TRANSIENT,
+})
 export class SongsService {
     //local db
 

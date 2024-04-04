@@ -1,5 +1,5 @@
-import { song } from 'src/songs/song.entity';
-import { user } from 'src/users/user.entity';
+import { Song } from 'src/songs/song.entity';
+import { User } from 'src/users/user.entity';
 import {
     Column,
     Entity,
@@ -15,4 +15,16 @@ export class Playlist {
 
     @Column()
     name: string;
+
+    //each playlist have multiple songs 
+
+    @OneToMany(() => Song, (song) => song.playlist)
+    songs: Song[];
+
+
+    //many playlists can belong to single user
+
+    @ManyToOne(() => User, (user) => user.playlists)
+    user: User;
+
 }
