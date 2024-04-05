@@ -1,5 +1,5 @@
 import { Artist } from "src/artists/artist.entity";
-import { Playlist } from "src/playlist/playlist.entity";
+import { Playlist } from "src/playlists/playlist.entity";
 import { Entity, Column, JoinTable, ManyToMany, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('songs')
@@ -11,7 +11,7 @@ export class Song {
     title: string;
 
     @Column('date')
-    releasedDate: Date;
+    releaseDate: Date;
 
     @Column('time')
     duration: Date;

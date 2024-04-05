@@ -5,9 +5,11 @@ import { SongsModule } from './songs/songs.module';
 import { LoggerMiddleware } from './common/middleware/logger/logger.middleware';
 import { SongsController } from './songs/songs.controller';
 import { DevConfigService } from './common/providers/DevConfigService';
+import { PlaylistsModule } from './playlists/playlists.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
-  imports: [SongsModule],
+  imports: [SongsModule, PlaylistsModule, UsersModule],
   controllers: [AppController],
   providers: [AppService, {
     provide: DevConfigService,

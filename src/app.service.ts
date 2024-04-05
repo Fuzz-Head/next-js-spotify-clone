@@ -3,8 +3,8 @@ import { DevConfigService } from './common/providers/DevConfigService';
 
 @Injectable()
 export class AppService {
-  constructor(private devConfigService: DevConfigService) { }
+  // constructor(private devConfigService: DevConfigService) { }
   getHello(): string {
-    return `Hello I am learning Nest.js ${this.devConfigService.getDBHOST()}`;
+    return `Hello I am learning Nest.js`;
   }
 }
